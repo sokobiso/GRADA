@@ -1,24 +1,40 @@
-﻿# Use the official .NET SDK image to build the app
+﻿# Use official .NET SDK as a build environment
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
 
+
+# Install AWS CLI inside the container
+# Copy project files to maintain dependencies
+COPY ["GRADA/GRADA.csproj", "GRADA/"]
+
+
+#
+# Restore dependencies
+WORKDIR /src
+RUN dotnet restore "GRADA/GRADA.csproj"
+
+
+
+
+# Build and publish the application
+WORKDIR /src/GRADA
+RUN dotnet publish "GRADA.csproj" -c "${BUILD_CONFIGURATION}" -o /app/publish /p:UseAppHost=false
+
+
+# Create final runtime image inside container
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 
-# Copy csproj and restore as distinct layers
-COPY *.sln ./
-RUN dotnet restore
+# Create non-root user
+RUN adduser --disabled-password --gecos "" appuser
+USER appuser
 
-# Copy the remaining files and build
-COPY . ./
-RUN dotnet publish -c Release -o out
+# Copy application
+COPY --from=build /app/publish .
 
-# Use the ASP.NET runtime image to run the app
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-
-WORKDIR /app
-COPY --from=build /app/out .
-
-# Expose port (change if your app uses a different one)
+# Expose necessary ports
 EXPOSE 80
 
-# Run the app
+# Set the entry point for the application
 ENTRYPOINT ["dotnet", "GRADA.dll"]

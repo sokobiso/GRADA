@@ -2,90 +2,93 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GRADA – Éditeur de traduction WYSIWYG</title>
     <style>
         body {
-            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 2em;
-            background-color: #f5f7fa;
+            background: #fafafa;
             color: #333;
         }
 
-        h1 {
-            font-size: 1.8em;
-            color: #2c3e50;
+        header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1em;
         }
 
-        p {
-            font-size: 1em;
+            header img {
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+            }
+
+        h1 {
+            margin: 0;
+            color: #222;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
             margin-bottom: 1em;
+            color: #555;
         }
 
         input[type="text"] {
             width: 60%;
-            padding: 10px;
+            padding: 8px;
             font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 4px;
         }
 
         button {
-            padding: 10px 18px;
+            padding: 9px 15px;
             font-size: 1em;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 4px;
             margin-left: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
-            button:hover {
-                background-color: #2980b9;
-            }
-
         #result {
-            margin-top: 25px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            background: #fff;
+            padding: 15px;
             min-height: 500px;
-            max-height: 70vh;
-            overflow-y: auto;
+            overflow: auto;
             white-space: normal;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         .translatable:hover {
-            outline: 2px dashed #f39c12;
+            outline: 2px dashed orange;
             cursor: pointer;
-        }
-
-        .translatable:focus {
-            background-color: #fff7d6;
         }
     </style>
 </head>
 <body>
 
-    <h1>GRADA – Éditeur de traduction contextuelle</h1>
-    <p>Entrez l’URL d’une page web pour la prévisualiser et la modifier directement :</p>
+    <header>
+        <img src="https://via.placeholder.com/60x60?text=G" alt="Logo GRADA" />
+        <h1>GRADA – Éditeur de traduction WYSIWYG</h1>
+    </header>
+
+    <div class="subtitle">
+        GRADA est un outil destiné aux traducteurs permettant de traduire des sites web dans leur contexte visuel original.
+        Cette solution vise à résoudre un problème courant en traduction : l'absence de visibilité sur la structure, le style et la longueur des contenus dans la version finale du site.
+    </div>
+
+    <p>Entrez l’URL d’une page web à traduire :</p>
 
     <input type="text" id="url" placeholder="https://example.com" />
     <button id="load">Charger la page</button>
     <button id="export">Exporter JSON</button>
 
     <div id="result" contenteditable="false" spellcheck="false">
-        <!-- Contenu HTML affiché ici -->
+        <!-- Le contenu HTML chargé s'affichera ici et sera éditable -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        const translations = {}; // Stockage local des traductions
-        let autoIdCounter = 0;
+        let translations = {};
 
         function highlightTranslatable() {
             const container = document.getElementById('result');
@@ -95,44 +98,42 @@
 
             textElements.forEach(el => {
                 if (el.textContent.trim().length > 0) {
-                    el.classList.add('translatable');
+                    const id = el.id || (el.id = 't_' + Math.random().toString(36).substr(2, 9));
+                    translations[id] = el.textContent;
 
-                    // Si pas d'id, en générer un unique
-                    if (!el.id) {
-                        el.id = `auto-id-${++autoIdCounter}`;
-                    }
+                    el.classList.add('translatable');
+                    el.style.cursor = 'pointer';
 
                     el.addEventListener('click', function (e) {
                         e.stopPropagation();
                         if (!this.isContentEditable) {
                             this.contentEditable = true;
                             this.focus();
+                            this.style.backgroundColor = '#ffffcc';
                         }
                     });
 
                     el.addEventListener('blur', function () {
                         this.contentEditable = false;
-                        translations[this.id] = this.textContent.trim();
+                        this.style.backgroundColor = '';
+                        translations[this.id] = this.textContent;
                     });
                 }
             });
         }
 
         $('#load').on('click', function () {
-            translations = {}; // reset translations à chaque chargement
-            autoIdCounter = 0;
-
             const url = $('#url').val().trim();
             if (!url) {
                 alert('Merci d’entrer une URL valide.');
                 return;
             }
-
             $('#result').html('Chargement en cours...');
+            translations = {}; // Réinitialiser
 
             fetch(`https://grada-4.onrender.com/api/proxy?url=${encodeURIComponent(url)}`)
                 .then(response => {
-                    if (!response.ok) throw new Error('Erreur lors du chargement de la page.');
+                    if (!response.ok) throw new Error('Erreur lors du chargement');
                     return response.text();
                 })
                 .then(html => {
@@ -145,18 +146,31 @@
                 });
         });
 
-        $('#export').on('click', function () {
-            if (Object.keys(translations).length === 0) {
-                alert("Aucune traduction modifiée à exporter.");
+        $('#result').on('click', 'a', function (e) {
+            e.preventDefault();
+
+            const href = $(this).attr('href');
+            if (!href || href.startsWith('javascript:') || href.startsWith('#')) return;
+
+            let baseUrl = $('#url').val();
+            let newUrl;
+            try {
+                newUrl = new URL(href, baseUrl).href;
+            } catch {
+                alert("Lien invalide : " + href);
                 return;
             }
-            const json = JSON.stringify(translations, null, 2);
-            const blob = new Blob([json], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
 
+            $('#url').val(newUrl);
+            $('#load').click();
+        });
+
+        $('#export').on('click', function () {
+            const blob = new Blob([JSON.stringify(translations, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'traductions.json';
+            a.download = 'traduction.json';
             a.click();
             URL.revokeObjectURL(url);
         });

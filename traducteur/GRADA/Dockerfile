@@ -18,8 +18,8 @@ RUN dotnet restore "traducteur/GRADA/GRADA.csproj"
 
 
 # Build and publish the application
-WORKDIR /src/GRADA
-RUN dotnet publish "traducteur/GRADA/GRADA.csproj" -c "${BUILD_CONFIGURATION}" -o /app/publish /p:UseAppHost=false
+WORKDIR /src/traducteur/GRADA
+RUN dotnet publish "GRADA.csproj" -c "${BUILD_CONFIGURATION}" -o /app/publish /p:UseAppHost=false
 
 
 # Create final runtime image inside container

@@ -1,40 +1,29 @@
-﻿# Use official .NET SDK as a build environment
+﻿# Use official .NET SDK image to build the app
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
+
 WORKDIR /src
 
-
-# Install AWS CLI inside the container
-# Copy project files to maintain dependencies
-COPY ["traducteur/GRADA/GRADA.csproj", "traducteur/GRADA/"]
-
-
-#
-# Restore dependencies
-WORKDIR /src
-RUN dotnet restore "traducteur/GRADA/GRADA.csproj"
-
-
-
-
-# Build and publish the application
+# Copy the .csproj file and restore dependencies
+COPY traducteur/GRADA/GRADA.csproj traducteur/GRADA/
 WORKDIR /src/traducteur/GRADA
-RUN dotnet publish "GRADA.csproj" -c "${BUILD_CONFIGURATION}" -o /app/publish /p:UseAppHost=false
+RUN dotnet restore
 
+# Copy the remaining source files
+COPY traducteur/GRADA/. ./
 
-# Create final runtime image inside container
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+# Publish the app to the /app/publish directory
+RUN dotnet publish -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+# Create final runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-# Create non-root user
-RUN adduser --disabled-password --gecos "" appuser
-USER appuser
-
-# Copy application
+# Copy the published output
 COPY --from=build /app/publish .
 
-# Expose necessary ports
+# Expose port 80
 EXPOSE 80
 
-# Set the entry point for the application
+# Run the application
 ENTRYPOINT ["dotnet", "GRADA.dll"]

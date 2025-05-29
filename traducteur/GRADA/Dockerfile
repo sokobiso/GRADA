@@ -6,7 +6,7 @@ WORKDIR /src
 
 # Install AWS CLI inside the container
 # Copy project files to maintain dependencies
-COPY ["GRADA.csproj", "/"]
+COPY ["traducteur/GRADA/GRADA.csproj", "/traducteur/GRADA"]
 
 
 #

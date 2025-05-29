@@ -6,13 +6,13 @@ WORKDIR /src
 
 # Install AWS CLI inside the container
 # Copy project files to maintain dependencies
-COPY ["GRADA.csproj", "GRADA/"]
+COPY ["GRADA.csproj", "/"]
 
 
 #
 # Restore dependencies
 WORKDIR /src
-RUN dotnet restore "GRADA/GRADA.csproj"
+RUN dotnet restore "GRADA.csproj"
 
 
 

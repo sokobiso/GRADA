@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GRADA.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.GRADA.props",
+      "PackagePath": "build\\GRADA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.GRADA.props",
+      "PackagePath": "buildMultiTargeting\\GRADA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.GRADA.props",
+      "PackagePath": "buildTransitive\\GRADA.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

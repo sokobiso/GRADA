@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Éditeur de traduction WYSIWYG</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background: #fafafa;
+    }
+    input[type="text"] {
+      width: 60%;
+      padding: 8px;
+      font-size: 1em;
+    }
+    button {
+      padding: 9px 15px;
+      font-size: 1em;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 15px;
+      min-height: 500px;
+      overflow: auto;
+      white-space: normal;
+    }
+    .translatable:hover {
+      outline: 2px dashed orange;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Éditeur de traduction WYSIWYG</h1>
+  <p>Entrez l’URL d’une page web pour la charger et la modifier directement ici :</p>
+
+  <input type="text" id="url" placeholder="https://example.com" />
+  <button id="load">Charger la page</button>
+
+  <div id="result" contenteditable="false" spellcheck="false">
+    <!-- Le contenu HTML chargé s'affichera ici et sera éditable -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function highlightTranslatable() {
+      const container = document.getElementById('result');
+      if (!container) return;
+
+      const textElements = container.querySelectorAll('p, span, h1, h2, h3, li, a, td, div');
+
+      textElements.forEach(el => {
+        if (el.textContent.trim().length > 0) {
+          el.classList.add('translatable');
+          el.style.cursor = 'pointer';
+
+          el.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (!this.isContentEditable) {
+              this.contentEditable = true;
+              this.focus();
+              this.style.backgroundColor = '#ffffcc';
+            }
+          });
+
+          el.addEventListener('blur', function() {
+            this.contentEditable = false;
+            this.style.backgroundColor = '';
+          });
+        }
+      });
+    }
+
+    $('#load').on('click', function() {
+      const url = $('#url').val().trim();
+      if (!url) {
+        alert('Merci d’entrer une URL valide.');
+        return;
+      }
+      $('#result').html('Chargement en cours...');
+      fetch(`https://localhost:5000/api/proxy?url=${encodeURIComponent(url)}`)
+        .then(response => {
+          if (!response.ok) throw new Error('Erreur lors du chargement');
+          return response.text();
+        })
+        .then(html => {
+          $('#result').html(html);
+          highlightTranslatable();
+        })
+        .catch(err => {
+          $('#result').html('');
+          alert('Erreur : ' + err.message);
+        });
+    });
+  </script>
+
+</body>
+</html>

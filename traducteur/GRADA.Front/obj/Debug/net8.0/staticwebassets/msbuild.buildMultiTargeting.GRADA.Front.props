@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GRADA.Front.props" />
+</Project>

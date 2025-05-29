@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "TranslationProxy.Controllers.ProxyController",
+    "Method": "GetHtml",
+    "RelativePath": "api/Proxy",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "url",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

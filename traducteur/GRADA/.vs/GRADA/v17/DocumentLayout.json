@@ -1,0 +1,182 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada-main\\traducteur\\grada\\controllers\\translationproxycontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:controllers\\translationproxycontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada-main\\traducteur\\grada\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada-main\\traducteur\\grada\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada-main\\traducteur\\grada\\grada.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:grada.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada-main\\traducteur\\grada\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada-main\\traducteur\\grada\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada-main\\traducteur\\grada\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada-main\\traducteur\\grada\\grada.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:grada.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada-main\\traducteur\\grada\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{65ddf8c3-8f89-4077-a6c6-dbb8853aab13}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e77209ba-064a-4625-b8ce-dfd1d7967cd1}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GRADA.http",
+              "DocumentMoniker": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\GRADA.http",
+              "RelativeDocumentMoniker": "GRADA.http",
+              "ToolTip": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\GRADA.http",
+              "RelativeToolTip": "GRADA.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-05-29T01:16:45.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TranslationProxyControllers.cs",
+              "DocumentMoniker": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\Controllers\\TranslationProxyControllers.cs",
+              "RelativeDocumentMoniker": "Controllers\\TranslationProxyControllers.cs",
+              "ToolTip": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\Controllers\\TranslationProxyControllers.cs",
+              "RelativeToolTip": "Controllers\\TranslationProxyControllers.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAADwvxkAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T01:15:28.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-29T01:19:50.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAGEAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-29T12:15:30.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GRADA.csproj",
+              "DocumentMoniker": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\GRADA.csproj",
+              "RelativeDocumentMoniker": "GRADA.csproj",
+              "ToolTip": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\GRADA.csproj",
+              "RelativeToolTip": "GRADA.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-29T12:14:15.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T13:56:00.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-29T01:19:30.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-29T13:43:53.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T01:20:25.103Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

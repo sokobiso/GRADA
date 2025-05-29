@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "G5ooqHVgMAVVp4e0W456rxFyhp7IVNKDruo/H7/eXXM=",
+  "Source": "GRADA",
+  "BasePath": "_content/GRADA",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GRADA\\wwwroot",
+      "Source": "GRADA",
+      "ContentRoot": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\wwwroot\\",
+      "BasePath": "_content/GRADA",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\wwwroot\\index.html",
+      "SourceId": "GRADA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\wwwroot\\",
+      "BasePath": "_content/GRADA",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

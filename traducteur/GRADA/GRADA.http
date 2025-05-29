@@ -1,0 +1,6 @@
+@GRADA_HostAddress = http://localhost:5194
+
+GET {{GRADA_HostAddress}}/ProxyController/
+Accept: application/json
+
+###

@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/GRADA/index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-dVynxbM37Xsz8M1Ma2NsLzWnxn43gtC\u002BhyakKB\u002BdBkA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2875"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022dVynxbM37Xsz8M1Ma2NsLzWnxn43gtC\u002BhyakKB\u002BdBkA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 29 May 2025 12:19:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GRADA/index.xdgil1avda.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xdgil1avda"},{"Name":"integrity","Value":"sha256-dVynxbM37Xsz8M1Ma2NsLzWnxn43gtC\u002BhyakKB\u002BdBkA="},{"Name":"label","Value":"_content/GRADA/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2875"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022dVynxbM37Xsz8M1Ma2NsLzWnxn43gtC\u002BhyakKB\u002BdBkA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 29 May 2025 12:19:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

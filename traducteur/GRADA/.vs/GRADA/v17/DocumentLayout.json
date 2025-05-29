@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\grada.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:grada.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\controllers\\translationproxycontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:controllers\\translationproxycontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\controllers\\translationproxycontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:controllers\\translationproxycontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\grada.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:grada.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE595C17-DCC0-4D52-BCEE-9CE7F55FA422}|GRADA.csproj|c:\\projets\\grada\\grada\\traducteur\\grada\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -99,36 +99,38 @@
               "RelativeToolTip": "Controllers\\TranslationProxyControllers.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAADwvxUAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T01:15:28.871Z"
+              "WhenOpened": "2025-05-29T01:15:28.871Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
               "ToolTip": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\Properties\\launchSettings.json",
               "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAiAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-29T01:19:50.115Z"
+              "WhenOpened": "2025-05-29T01:19:50.115Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAGAAAAAgAAAA",
+              "ViewState": "AQIAAHsAAAAAAAAAAADwv4QAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-05-29T12:15:30.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "GRADA.csproj",
               "DocumentMoniker": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\GRADA.csproj",
               "RelativeDocumentMoniker": "GRADA.csproj",
@@ -136,19 +138,21 @@
               "RelativeToolTip": "GRADA.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-29T12:14:15.678Z"
+              "WhenOpened": "2025-05-29T12:14:15.678Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T13:56:00.174Z"
+              "WhenOpened": "2025-05-29T13:56:00.174Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

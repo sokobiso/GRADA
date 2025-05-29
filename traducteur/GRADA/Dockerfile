@@ -12,14 +12,14 @@ COPY ["traducteur/GRADA/GRADA.csproj", "/traducteur/GRADA"]
 #
 # Restore dependencies
 WORKDIR /src
-RUN dotnet restore "GRADA.csproj"
+RUN dotnet restore "traducteur/GRADA/GRADA.csproj"
 
 
 
 
 # Build and publish the application
 WORKDIR /src/GRADA
-RUN dotnet publish "GRADA.csproj" -c "${BUILD_CONFIGURATION}" -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "traducteur/GRADA/GRADA.csproj" -c "${BUILD_CONFIGURATION}" -o /app/publish /p:UseAppHost=false
 
 
 # Create final runtime image inside container

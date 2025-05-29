@@ -84,7 +84,7 @@
         return;
       }
       $('#result').html('Chargement en cours...');
-      fetch(`https://localhost:5000/api/proxy?url=${encodeURIComponent(url)}`)
+        fetch(`https://grada-4.onrender.com/api/proxy?url=${encodeURIComponent(url)}`)
         .then(response => {
           if (!response.ok) throw new Error('Erreur lors du chargement');
           return response.text();

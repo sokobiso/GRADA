@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G5ooqHVgMAVVp4e0W456rxFyhp7IVNKDruo/H7/eXXM=",
+  "Hash": "YBbkUBva3fqjaZdZxsBhH0JiPkXFI9eiA7imEI3MDso=",
   "Source": "GRADA",
   "BasePath": "_content/GRADA",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "GRADA\\wwwroot",
       "Source": "GRADA",
-      "ContentRoot": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\wwwroot\\",
+      "ContentRoot": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\wwwroot\\",
       "BasePath": "_content/GRADA",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\wwwroot\\index.html",
+      "Identity": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\wwwroot\\index.html",
       "SourceId": "GRADA",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projets\\GRADA-main\\traducteur\\GRADA\\wwwroot\\",
+      "ContentRoot": "C:\\Projets\\GRADA\\GRADA\\traducteur\\GRADA\\wwwroot\\",
       "BasePath": "_content/GRADA",
       "RelativePath": "index.html",
       "AssetKind": "All",

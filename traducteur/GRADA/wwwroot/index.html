@@ -3,106 +3,84 @@
 <head>
     <meta charset="UTF-8" />
     <title>GRADA – Éditeur de traduction WYSIWYG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 2em;
-            background: #fafafa;
-            color: #333;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 1em;
-        }
-
-            header img {
-                width: 60px;
-                height: 60px;
-                object-fit: contain;
-            }
-
-        h1 {
-            margin: 0;
-            color: #222;
-        }
-
-        .subtitle {
-            font-size: 1.1em;
-            margin-bottom: 1em;
-            color: #555;
-        }
-
-        input[type="text"] {
-            width: 60%;
-            padding: 8px;
-            font-size: 1em;
-        }
-
-        button {
-            padding: 9px 15px;
-            font-size: 1em;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-
-        #result {
-            margin-top: 20px;
-            border: 1px solid #ccc;
-            background: #fff;
-            padding: 15px;
-            min-height: 500px;
-            overflow: auto;
-            white-space: normal;
+            background: #f8f9fa;
+            padding: 2rem;
         }
 
         .translatable:hover {
             outline: 2px dashed orange;
             cursor: pointer;
         }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ccc;
+            background: white;
+        }
+
+        .section-title {
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <!--<img src="https://via.placeholder.com/60x60?text=G" alt="Logo GRADA" />-->
-        <h1>GRADA – Éditeur de traduction WYSIWYG</h1>
-    </header>
+    <div class="container">
+        <h1 class="mb-3">GRADA – Éditeur de traduction WYSIWYG</h1>
 
-    <div class="subtitle">
-        GRADA est un outil destiné aux traducteurs permettant de traduire des sites web dans leur contexte visuel original.
-        Cette solution vise à résoudre un problème courant en traduction : l'absence de visibilité sur la structure, le style et la longueur des contenus dans la version finale du site.
-    </div>
+        <div class="alert alert-info">
+            <strong>Comment ça marche ?</strong><br>
+            Cet outil vous permet de charger n’importe quelle page web, puis de cliquer et modifier directement les textes visibles.<br>
+            Les contenus traduits peuvent ensuite être exportés au format JSON. Aucune redirection ne se produit et les styles ne perturbent pas l’interface.
+            <br><br>
+            <strong>Étapes :</strong>
+            <ol>
+                <li>Copiez-collez l’URL d’un site dans le champ ci-dessous (par exemple <code>https://www.wix.com</code>).</li>
+                <li>Cliquez sur <strong>« Charger la page »</strong> pour afficher le site dans la fenêtre intégrée.</li>
+                <li>Survolez avec votre souris les textes modifiables, ils seront surlignés en orange.</li>
+                <li>Cliquez sur un texte pour l’éditer directement, puis cliquez à l’extérieur pour enregistrer la modification.</li>
+                <li>Vous pouvez répéter l’opération sur tous les textes souhaités.</li>
+                <li>Enfin, cliquez sur <strong>« Exporter les traductions »</strong> pour télécharger un fichier JSON contenant toutes vos modifications.</li>
+            </ol>
+            <strong>Note :</strong> Les interactions comme les liens ou formulaires sont désactivées pour éviter de quitter cet environnement sécurisé.
+        </div>
 
-    <p>Entrez l’URL d’une page web à traduire :</p>
+        <div class="mb-3">
+            <input type="text" id="url" class="form-control" placeholder="https://example.com">
+        </div>
 
-    <input type="text" id="url" placeholder="https://example.com" />
-    <button id="load">Charger la page</button>
-    <button id="export">Exporter JSON</button>
+        <div class="mb-4">
+            <button id="load" class="btn btn-primary">Charger la page</button>
+            <button id="export" class="btn btn-success">Exporter les traductions</button>
+        </div>
 
-    <div id="result" contenteditable="false" spellcheck="false">
-        <!-- Le contenu HTML chargé s'affichera ici et sera éditable -->
+        <iframe id="resultFrame" sandbox="allow-same-origin"></iframe>
+
+        <p class="text-muted mt-4">
+            🛠️ Projet <strong>en cours de développement</strong> – vos retours sont les bienvenus.<br>
+            Merci de bien tester cet outil et me faire part de vos expériences et suggestions d’amélioration UX ou fonctionnelles.
+        </p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         let translations = {};
 
-        function highlightTranslatable() {
-            const container = document.getElementById('result');
-            if (!container) return;
-
+        function highlightTranslatable(doc) {
+            const container = doc.body;
             const textElements = container.querySelectorAll('p, span, h1, h2, h3, li, a, td, div');
 
-            textElements.forEach(el => {
+            textElements.forEach((el, index) => {
                 if (el.textContent.trim().length > 0) {
-                    const id = el.id || (el.id = 't_' + Math.random().toString(36).substr(2, 9));
-                    translations[id] = el.textContent;
-
+                    const id = el.getAttribute('data-tr-id') || `tr-${index}-${Date.now()}`;
+                    el.setAttribute('data-tr-id', id);
                     el.classList.add('translatable');
-                    el.style.cursor = 'pointer';
 
                     el.addEventListener('click', function (e) {
                         e.stopPropagation();
@@ -110,15 +88,26 @@
                             this.contentEditable = true;
                             this.focus();
                             this.style.backgroundColor = '#ffffcc';
+                            e.preventDefault();
                         }
                     });
 
                     el.addEventListener('blur', function () {
                         this.contentEditable = false;
                         this.style.backgroundColor = '';
-                        translations[this.id] = this.textContent;
+                        translations[id] = this.innerText;
                     });
                 }
+            });
+        }
+
+        function interceptInteractions(doc) {
+            doc.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', e => e.preventDefault());
+            });
+
+            doc.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', e => e.preventDefault());
             });
         }
 
@@ -128,8 +117,9 @@
                 alert('Merci d’entrer une URL valide.');
                 return;
             }
-            $('#result').html('Chargement en cours...');
-            translations = {}; // Réinitialiser
+
+            $('#resultFrame').attr('srcdoc', 'Chargement en cours...');
+            translations = {};
 
             fetch(`https://grada-4.onrender.com/api/proxy?url=${encodeURIComponent(url)}`)
                 .then(response => {
@@ -137,42 +127,34 @@
                     return response.text();
                 })
                 .then(html => {
-                    $('#result').html(html);
-                    highlightTranslatable();
+                    const iframe = document.getElementById('resultFrame');
+                    iframe.srcdoc = html;
+
+                    iframe.onload = () => {
+                        const doc = iframe.contentDocument || iframe.contentWindow.document;
+                        highlightTranslatable(doc);
+                        interceptInteractions(doc);
+                    };
                 })
                 .catch(err => {
-                    $('#result').html('');
+                    $('#resultFrame').attr('srcdoc', '');
                     alert('Erreur : ' + err.message);
                 });
         });
 
-        $('#result').on('click', 'a', function (e) {
-            e.preventDefault();
-
-            const href = $(this).attr('href');
-            if (!href || href.startsWith('javascript:') || href.startsWith('#')) return;
-
-            let baseUrl = $('#url').val();
-            let newUrl;
-            try {
-                newUrl = new URL(href, baseUrl).href;
-            } catch {
-                alert("Lien invalide : " + href);
+        $('#export').on('click', function () {
+            if (Object.keys(translations).length === 0) {
+                alert("Aucune modification à exporter.");
                 return;
             }
 
-            $('#url').val(newUrl);
-            $('#load').click();
-        });
-
-        $('#export').on('click', function () {
-            const blob = new Blob([JSON.stringify(translations, null, 2)], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'traduction.json';
-            a.click();
-            URL.revokeObjectURL(url);
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(translations, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", "traductions.json");
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
         });
     </script>
 
